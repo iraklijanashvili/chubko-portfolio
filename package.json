@@ -1,0 +1,56 @@
+{
+  "name": "chubko-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CHUBKO - Creative Graphic Design Studio Portfolio Website",
+  "keywords": ["portfolio", "graphic design", "next.js", "typescript", "tailwind"],
+  "author": "CHUBKO Design Studio",
+  "license": "MIT",
+  "homepage": "https://chubko.design",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iraklijanashvili/chubko-portfolio.git"
+  },
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "build:analyze": "ANALYZE=true next build",
+    "preview": "next build && next start",
+    "clean": "rm -rf .next out",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod",
+    "test:lighthouse": "lhci autorun",
+    "prepare:deploy": "npm run clean && npm run type-check && npm run lint && npm run build"
+  },
+  "dependencies": {
+    "@formspree/react": "^3.0.0",
+    "@vercel/analytics": "^1.2.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.24",
+    "lucide-react": "^0.363.0",
+    "mini-svg-data-uri": "^1.4.4",
+    "next": "14.1.4",
+    "next-themes": "^0.3.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.0.1",
+    "tailwind-merge": "^2.2.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
