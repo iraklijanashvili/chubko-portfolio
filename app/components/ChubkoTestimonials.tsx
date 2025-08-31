@@ -180,26 +180,26 @@ const ChubkoTestimonials = () => {
             </AnimatePresence>
           </div>
 
-          {/* Navigation Buttons */}
-          <div className="flex justify-center items-center gap-4 mt-8">
+          {/* Compact Navigation */}
+          <div className="flex justify-center items-center gap-3 mt-6">
             <button
               onClick={prevTestimonial}
-              className="p-3 modern-card hover:bg-chubko-purple/10 transition-all duration-300 group"
+              className="p-2 bg-muted hover:bg-chubko-purple/10 rounded-full transition-all duration-300 group hover:scale-110"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="w-5 h-5 text-muted-foreground group-hover:text-chubko-purple transition-colors" />
+              <ChevronLeft className="w-4 h-4 text-muted-foreground group-hover:text-chubko-purple transition-colors" />
             </button>
 
-            {/* Dots Indicator */}
-            <div className="flex gap-2">
+            {/* Compact Dots Indicator */}
+            <div className="flex gap-1.5 px-3">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     index === currentIndex
                       ? 'bg-chubko-purple scale-125'
-                      : 'bg-muted hover:bg-chubko-purple/50'
+                      : 'bg-muted hover:bg-chubko-purple/50 hover:scale-110'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -208,21 +208,21 @@ const ChubkoTestimonials = () => {
 
             <button
               onClick={nextTestimonial}
-              className="p-3 modern-card hover:bg-chubko-purple/10 transition-all duration-300 group"
+              className="p-2 bg-muted hover:bg-chubko-purple/10 rounded-full transition-all duration-300 group hover:scale-110"
               aria-label="Next testimonial"
             >
-              <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-chubko-purple transition-colors" />
+              <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-chubko-purple transition-colors" />
             </button>
           </div>
 
-          {/* Auto-play indicator */}
-          <div className="flex justify-center mt-4">
+          {/* Compact Auto-play indicator */}
+          <div className="flex justify-center mt-3">
             <button
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className="text-sm text-muted-foreground hover:text-chubko-purple transition-colors"
+              className="text-xs text-muted-foreground hover:text-chubko-purple transition-colors px-3 py-1 rounded-full hover:bg-muted/50"
               style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif' }}
             >
-              {isAutoPlaying ? 'Pause' : 'Play'} Auto-scroll
+              {isAutoPlaying ? '⏸️ Pause' : '▶️ Play'} Auto-scroll
             </button>
           </div>
         </div>
